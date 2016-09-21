@@ -1,0 +1,29 @@
+<div class="container" ng-controller="polygonCtrl">
+	<div class="row">
+		<div class="col-md-4">
+			<table class="table">
+				<thead>
+					<tr>
+						<th></th>
+						<th>Name</th>
+						<th>Address</th>
+						<th>Status</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="item in listMarker">
+						<td><input type="checkbox" ng-checked="item.checked" /></td>
+						<td>{{item.name}}</td>
+						<td>{{item.address}}</td>
+						<td>{{item.checked}}</td>
+					</tr>
+				</tbody>
+			</table>
+			<input id="delete" class="btn btn-primary"type=button value="Remove polycon">
+		</div>
+
+		<div class="col-md-8">
+			<map markers="listMarker"></map>
+		</div>
+	</div>
+</div>
